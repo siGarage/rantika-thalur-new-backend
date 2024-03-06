@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_confirmations",
+  "info": {
+    "singularName": "order-confirmation",
+    "pluralName": "order-confirmations",
+    "displayName": "ConfirmOrder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Order_Details": {
+      "type": "json"
+    },
+    "Order_status": {
+      "type": "string"
+    },
+    "Order_By": {
+      "type": "string"
+    },
+    "Order_Amount": {
+      "type": "integer"
+    },
+    "Order_Track_Id": {
+      "type": "string"
+    },
+    "Delivery_Partner": {
+      "type": "string"
+    },
+    "Order_Address": {
+      "type": "text"
+    },
+    "Order_Track_Link": {
+      "type": "text"
+    },
+    "Payment_id": {
+      "type": "string"
+    }
+  }
+}

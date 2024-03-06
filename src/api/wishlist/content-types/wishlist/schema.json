@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wishlists",
+  "info": {
+    "singularName": "wishlist",
+    "pluralName": "wishlists",
+    "displayName": "Wishlist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "id_product": {
+      "type": "biginteger",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "json"
+    }
+  }
+}
