@@ -10,8 +10,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
     try {
       const razorpay = new Razorpay({
-        key_id: "rzp_test_kuwC6yLAG4jMXv",
-        key_secret: "HKit1m0guppfJkMTySLjNzqi",
+        key_id: "rzp_live_91L6FV1TyEcyhT",
+        key_secret: "stU7JaLwu93swhqLGdC8bXx8",
       });
         const options = ctx.request.body;
         const order = await razorpay.orders.create(options);

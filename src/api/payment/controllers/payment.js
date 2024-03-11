@@ -19,7 +19,7 @@ module.exports = createCoreController("api::payment.payment", ({ strapi }) => ({
         address,
         amount,
       } = ctx.request.body;
-      const sha = crypto.createHmac("sha256", "HKit1m0guppfJkMTySLjNzqi");
+      const sha = crypto.createHmac("sha256", "stU7JaLwu93swhqLGdC8bXx8");
       //order_id + "|" + razorpay_payment_id
       sha.update(`${razorpay_order_id}|${razorpay_payment_id}`);
       const digest = sha.digest("hex");
