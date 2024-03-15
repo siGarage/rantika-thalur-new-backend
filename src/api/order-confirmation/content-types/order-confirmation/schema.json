@@ -33,6 +33,15 @@
     "Order_Address": {
       "type": "text"
     },
+    "Order_Name": {
+      "type": "text"
+    },
+    "Order_Phone": {
+      "type": "text"
+    },
+    "Order_Pin": {
+      "type": "text"
+    },
     "Order_Track_Link": {
       "type": "text"
     },

@@ -873,6 +873,9 @@ export interface ApiOrderConfirmationOrderConfirmation
     Order_Track_Id: Attribute.String;
     Delivery_Partner: Attribute.String;
     Order_Address: Attribute.Text;
+    Order_Name: Attribute.Text;
+    Order_Pin: Attribute.Text;
+    Order_Phone: Attribute.Text;
     Order_Track_Link: Attribute.Text;
     Payment_id: Attribute.String;
     createdAt: Attribute.DateTime;

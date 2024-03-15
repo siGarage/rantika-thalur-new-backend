@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_shipping_details",
+  "info": {
+    "singularName": "users-shipping-detail",
+    "pluralName": "users-shipping-details",
+    "displayName": "UsersShippingDetail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "integer"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "userId": {
+      "type": "integer"
+    }
+  }
+}
