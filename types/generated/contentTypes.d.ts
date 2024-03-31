@@ -795,6 +795,7 @@ export interface ApiCustomSizeCustomSize extends Schema.CollectionType {
     phone: Attribute.String;
     email: Attribute.Email;
     upperbust: Attribute.String;
+    cart_id: Attribute.String;
     bust: Attribute.String;
     highwaist: Attribute.String;
     waist: Attribute.String;
@@ -805,7 +806,6 @@ export interface ApiCustomSizeCustomSize extends Schema.CollectionType {
     bicep: Attribute.String;
     fullLength: Attribute.String;
     pantskirtLength: Attribute.String;
-    cart_id:Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1050,7 +1050,7 @@ export interface ApiUsersShippingDetailUsersShippingDetail
     address: Attribute.Text;
     name: Attribute.String;
     pin: Attribute.Integer;
-    phone: Attribute.Integer;
+    phone: Attribute.BigInteger;
     userId: Attribute.Integer;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
