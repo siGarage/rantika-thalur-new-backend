@@ -24,6 +24,9 @@
     "upperbust": {
       "type": "string"
     },
+    "cart_id": {
+      "type": "string"
+    },
     "bust": {
       "type": "string"
     },

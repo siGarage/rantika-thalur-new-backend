@@ -805,6 +805,7 @@ export interface ApiCustomSizeCustomSize extends Schema.CollectionType {
     bicep: Attribute.String;
     fullLength: Attribute.String;
     pantskirtLength: Attribute.String;
+    cart_id:Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
