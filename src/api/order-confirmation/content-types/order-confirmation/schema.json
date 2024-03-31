@@ -4,7 +4,7 @@
   "info": {
     "singularName": "order-confirmation",
     "pluralName": "order-confirmations",
-    "displayName": "ConfirmOrder",
+    "displayName": "order-confirmation",
     "description": ""
   },
   "options": {

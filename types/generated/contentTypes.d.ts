@@ -860,7 +860,7 @@ export interface ApiOrderConfirmationOrderConfirmation
   info: {
     singularName: 'order-confirmation';
     pluralName: 'order-confirmations';
-    displayName: 'ConfirmOrder';
+    displayName: 'order-confirmation';
     description: '';
   };
   options: {
@@ -875,8 +875,8 @@ export interface ApiOrderConfirmationOrderConfirmation
     Delivery_Partner: Attribute.String;
     Order_Address: Attribute.Text;
     Order_Name: Attribute.Text;
-    Order_Pin: Attribute.Text;
     Order_Phone: Attribute.Text;
+    Order_Pin: Attribute.Text;
     Order_Track_Link: Attribute.Text;
     Payment_id: Attribute.String;
     createdAt: Attribute.DateTime;
@@ -1034,6 +1034,42 @@ export interface ApiSizeSize extends Schema.CollectionType {
   };
 }
 
+export interface ApiUsersShippingDetailUsersShippingDetail
+  extends Schema.CollectionType {
+  collectionName: 'users_shipping_details';
+  info: {
+    singularName: 'users-shipping-detail';
+    pluralName: 'users-shipping-details';
+    displayName: 'UsersShippingDetail';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    address: Attribute.Text;
+    name: Attribute.String;
+    pin: Attribute.Integer;
+    phone: Attribute.Integer;
+    userId: Attribute.Integer;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::users-shipping-detail.users-shipping-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::users-shipping-detail.users-shipping-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiWishlistWishlist extends Schema.CollectionType {
   collectionName: 'wishlists';
   info: {
@@ -1097,6 +1133,7 @@ declare module '@strapi/types' {
       'api::product.product': ApiProductProduct;
       'api::rating.rating': ApiRatingRating;
       'api::size.size': ApiSizeSize;
+      'api::users-shipping-detail.users-shipping-detail': ApiUsersShippingDetailUsersShippingDetail;
       'api::wishlist.wishlist': ApiWishlistWishlist;
     }
   }
