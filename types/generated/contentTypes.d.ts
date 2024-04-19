@@ -652,7 +652,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       }>;
     resetPasswordToken: Attribute.String & Attribute.Private;
     confirmationToken: Attribute.String & Attribute.Private;
-    confirmed: Attribute.Boolean & Attribute.DefaultTo<false>;
+    confirmed: Attribute.Boolean & Attribute.DefaultTo<true>;
     blocked: Attribute.Boolean & Attribute.DefaultTo<false>;
     role: Attribute.Relation<
       'plugin::users-permissions.user',
@@ -1034,6 +1034,37 @@ export interface ApiSizeSize extends Schema.CollectionType {
   };
 }
 
+export interface ApiTestiminialTestiminial extends Schema.CollectionType {
+  collectionName: 'testiminials';
+  info: {
+    singularName: 'testiminial';
+    pluralName: 'testiminials';
+    displayName: 'Testiminial';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Name: Attribute.Text;
+    Description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testiminial.testiminial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testiminial.testiminial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiUsersShippingDetailUsersShippingDetail
   extends Schema.CollectionType {
   collectionName: 'users_shipping_details';
@@ -1133,6 +1164,7 @@ declare module '@strapi/types' {
       'api::product.product': ApiProductProduct;
       'api::rating.rating': ApiRatingRating;
       'api::size.size': ApiSizeSize;
+      'api::testiminial.testiminial': ApiTestiminialTestiminial;
       'api::users-shipping-detail.users-shipping-detail': ApiUsersShippingDetailUsersShippingDetail;
       'api::wishlist.wishlist': ApiWishlistWishlist;
     }
