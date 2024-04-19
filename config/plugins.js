@@ -7,17 +7,16 @@ module.exports = ({ env }) => ({
         host: "smtp.gmail.com",
         port: 587,
         auth: {
-          user: "kartik65361@gmail.com",
-          pass: "yeigdjdhzulpbcwe",
+          user: env("SMTP_USER"),
+          pass: env("SMTP_PASSWORD"),
         },
         // ... any custom nodemailer options
       },
       settings: {
         defaultFrom: "kartik@gmail.com",
         defaultReplyTo: "kartik65361@gmail.com",
-      }
-    }
-  }
+      },
+    },
+  },
   // ...
 });
-
