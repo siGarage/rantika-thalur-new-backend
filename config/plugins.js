@@ -17,6 +17,6 @@ module.exports = ({ env }) => ({
         defaultReplyTo: "kartik65361@gmail.com",
       },
     },
-  },
+  }
   // ...
 });
