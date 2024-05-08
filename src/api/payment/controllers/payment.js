@@ -52,11 +52,35 @@ module.exports = createCoreController("api::payment.payment", ({ strapi }) => ({
             Payment_id: razorpay_payment_id,
           },
         });
-      ctx.send({
-        msg: "success",
-        orderId: razorpay_order_id,
-        paymentId: razorpay_payment_id,
-      });
+      await strapi.plugins["email"].services.email.send({
+        to: email,
+        cc: "contactrantikathakurclothing@gmail.com",
+        replyTo: "valid email address",
+        subject: "You got a new message from RantikaThakurClothing:",
+        text: `<p>Dear Customer,</p>
+        <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+         Thank you for shopping at the Rantika Thakur Clothing! Your order has confirmed.
+        Price :${amount}
+        </p>
+        <p>
+          Best wishes,<br>RantikaThakurClothing Team<br>
+          Keep Shoping...! 
+        </p>`,
+        html: `<p>Dear Customer,</p>
+        <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+         Thank you for shopping at the Rantika Thakur Clothing! Your order has confirmed.
+        Price :${amount}
+        </p>
+        <p>
+          Best wishes,<br>RantikaThakurClothing Team<br>
+          Keep Shoping...! 
+        </p>`,
+      }),
+        ctx.send({
+          msg: "success",
+          orderId: razorpay_order_id,
+          paymentId: razorpay_payment_id,
+        });
     } catch (error) {
       return ctx.send({ error });
     }
