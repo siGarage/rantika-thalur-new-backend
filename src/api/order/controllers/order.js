@@ -2,7 +2,7 @@
 /**
  * order controller
  */
-const Razorpay = require("Razorpay");
+const Razorpay = require("razorpay");
 
 const { createCoreController } = require("@strapi/strapi").factories;
 

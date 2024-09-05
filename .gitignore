@@ -110,5 +110,5 @@ exports
 *.cache
 dist
 build
-.env
+*.env
 .strapi-updater.json
